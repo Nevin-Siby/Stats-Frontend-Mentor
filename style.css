@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  align-items: center;
+  min-height: 100vh;
+  background-color: hsl(233, 47%, 7%);
+  display: flex;
+  font-size: 14px;
+}
+
+.container {
+  max-width: 1020px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.grid {
+  background-color: hsl(244, 38%, 16%);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  border-radius: 15px;
+  overflow: hidden;
+  margin: 2rem;
+}
+
+.right-side-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.right-side-img {
+  position: relative;
+}
+
+.right-side-img::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  background-color: hsla(277, 64%, 61%, 0.6);
+  height: 100%;
+  width: 100%;
+}
+
+.content {
+  padding: 60px 60px;
+  color: white;
+}
+
+.title {
+  padding-bottom: 22px;
+}
+
+.subtitle {
+  color: hsla(0, 0%, 100%, 0.75);
+  line-height: 1.7;
+}
+
+.text-color {
+  display: inline-block;
+  color: hsl(277, 64%, 61%);
+}
+
+.stat-box {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  padding-top: 60px;
+  font-size: 10px;
+  letter-spacing: 2px;
+}
+
+.stat-box p.num {
+  font-size: 20px;
+  font-weight: 700;
+  margin-bottom: 7px;
+  color: hsl(0, 0%, 100%);
+}
+
+.stat-box p {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+@media only screen and (max-width: 768px) and (min-height: 426px) {
+  body {
+    font-size: 12px;
+  }
+  .content {
+    padding: 12%;
+  }
+  .title {
+    font-size: 22px;
+  }
+  .stat-box {
+    padding-top: 30px;
+  }
+  .stat-box p.num {
+    font-size: 17px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+  body {
+    text-align: center;
+  }
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  .right-side-img {
+    order: -1;
+  }
+  .content {
+    padding: 12% 8%;
+  }
+  .title {
+    font-size: 23px;
+    line-height: 1.4;
+  }
+  .stat-box {
+    flex-direction: column;
+    padding-top: 30px;
+  }
+  .stat-box div {
+    margin-top: 20px;
+  }
+}
